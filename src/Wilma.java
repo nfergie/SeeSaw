@@ -23,7 +23,7 @@ public class Wilma implements Runnable{
 
 
 
-                    Thread.sleep(1);
+                    Thread.sleep(1000);
                 }
                 sem1.release();
             }catch (InterruptedException e){
