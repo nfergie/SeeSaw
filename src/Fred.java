@@ -16,12 +16,14 @@ public class Fred implements Runnable {
             try{
                 sem1.acquire();
                 while(h.fheight < 7){
+                    System.out.println("Fred's Height: " + h.fheight + " Wilma's Height: " + h.wheight);
+
                     h.fheight += 1;
                     h.wheight -= 1;
 
-                    System.out.println("Fred's Height: " + h.fheight + " Wilma's Height: " + h.wheight);
 
-                    Thread.sleep(1000);
+
+                    Thread.sleep(1);
                 }
                 sem2.release();
             }catch (InterruptedException e){

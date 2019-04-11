@@ -16,12 +16,14 @@ public class Wilma implements Runnable{
             try{
                 sem2.acquire();
                 while(h.wheight < 7){
+                    System.out.println("Fred's Height: " + h.fheight + " Wilma's Height: " + h.wheight);
+
                     h.fheight -= 1.5;
                     h.wheight += 1.5;
 
-                    System.out.println("Fred's Height: " + h.fheight + " Wilma's Height: " + h.wheight);
 
-                    Thread.sleep(1000);
+
+                    Thread.sleep(1);
                 }
                 sem1.release();
             }catch (InterruptedException e){

@@ -10,8 +10,6 @@ public class SeeSaw {
 
         try{
             sem2.acquire();
-            System.out.println("Fred's Height: " + heights.fheight + " Wilma's Height: " + heights.wheight);
-            Thread.sleep(1000);
 
             Wilma w = new Wilma(sem1, sem2, heights);
             Fred f = new Fred(sem1, sem2, heights);
